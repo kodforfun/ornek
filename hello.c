@@ -37,7 +37,6 @@ int *bolme(int s1, int s2){
     return liste;
 }
 int oran(int s1, int s2){
-    int count =0;
     int *p;
     int i;
     for(i=0;i<3;i++){
