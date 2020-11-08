@@ -58,9 +58,7 @@ int main(void) {
   
   // marker for automated benchmarks
   oran(14,13);
-  oran(1,2);
-  oran(3,5);
-  oran(8,3);
+
   while (1);
 
   return 0;
