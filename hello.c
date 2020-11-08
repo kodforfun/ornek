@@ -52,7 +52,7 @@ int oran(int s1, int s2){
 
     }
 }
-}
+
 
 int main(void) {
   hal_setup(CLOCK_FAST);
