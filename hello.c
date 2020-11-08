@@ -14,23 +14,53 @@ static void intyazdir(const char *s, const int a) {
   snprintf(out,32,s,a);
   hal_send_str(out);
 }
+int *bolme(int s1, int s2){
+    static int liste[2];
+    int r = s1;
+    int q = 0;
 
-int fac(int n){
-  int f=1;
-  while(n>1){
-    f=f*n;
-    n--;
-  }
-  return f;
+    while( r >= s2 ){
+        int k = 1;
+        int x = s2;
+        int t;
+
+        while( ( t = x+x ) < r ){
+            x = t;
+            k += k;
+        }
+
+    q += k;
+    r -= x;
+    }
+    liste[0]=q;
+    liste[1]=r;
+    return liste;
 }
+void oran(int s1, int s2){
+    int *p;
+    int i;
+    for(i=0;i<3;i++){
+        p = bolme(s1,s2);
+        int sonuc = p[0];
+        int kalan = p[1];
+        intyazdir("%d",sonuc);
+        if(i == 0){
+        yazdir(",");
+        }
+        s1 = kalan *10; 
+
+    }
+  yazdir("\n");
+}
+
 
 int main(void) {
   hal_setup(CLOCK_FAST);
-
+  
   // marker for automated benchmarks
-  yazdir("Hello World!!!");
-  intyazdir("%d\n",fac(5));
-  yazdir("#");
+  oran(14,13);
+  oran(1,2);
+  oran(3,2);
 
   while (1);
 
