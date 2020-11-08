@@ -36,7 +36,7 @@ int *bolme(int s1, int s2){
     liste[1]=r;
     return liste;
 }
-int oran(int s1, int s2){
+void oran(int s1, int s2){
     int *p;
     int i;
     for(i=0;i<3;i++){
